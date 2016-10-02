@@ -5,4 +5,4 @@ This is a web app project. The app will track food consumption and activities. U
 
 More information about this repository can be found in the [Wiki](https://github.com/yaseminalpay/Fall2016Swe573_YaseminAlpay/wiki) pages including Requirements and Mockups, Design, Planning, Tools and Configuration.
 
-[ZenHub](https://www.zenhub.com/) plugin is strongly recommended to be able to see the Boards and Burndown tabs and Epic-type issues. 
+[ZenHub](https://www.zenhub.com/) plugin is strongly recommended to be able to see the Boards and Burndown tabs, Epic-type issues and issue time estimations (story points).
