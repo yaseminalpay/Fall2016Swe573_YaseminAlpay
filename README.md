@@ -9,6 +9,8 @@ More information about this repository can be found in the [Wiki](https://github
 
 [-Requirements](https://github.com/yaseminalpay/Fall2016Swe573_YaseminAlpay/wiki/01-Requirements) : Why this app?
 
+[-Project Plan](https://github.com/yaseminalpay/Fall2016Swe573_YaseminAlpay/wiki/02-Project-Plan) : What is the plan?
+
 [-Mockups](https://github.com/yaseminalpay/Fall2016Swe573_YaseminAlpay/wiki/01.01-Mockups) : What can it do?
 
 [-Tools](https://github.com/yaseminalpay/Fall2016Swe573_YaseminAlpay/wiki/04-Tools) : What to use for project management and development? 
