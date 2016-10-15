@@ -13,7 +13,7 @@ More information about this repository can be found in the [Wiki](https://github
 
 [-Mockups](https://github.com/yaseminalpay/Fall2016Swe573_YaseminAlpay/wiki/01.01-Mockups) : What can it do?
 
-[-Tools](https://github.com/yaseminalpay/Fall2016Swe573_YaseminAlpay/wiki/04-Tools) : What to use for project management and development? 
+[-Tools](https://github.com/yaseminalpay/Fall2016Swe573_YaseminAlpay/wiki/03-Tools) : What to use for project management and development? 
 
 ###Notes:
 [ZenHub](https://www.zenhub.com/) is a powerful project management plugin for GitHub and strongly recommended to be able to see the Boards and Burndown tabs, Epics and time estimations (story points).
