@@ -14,5 +14,12 @@
     <h1>username: ${user}</h1>
     <h1>pass: ${pass}</h1>
 
+
+    <form method="POST" action="/newProfile" modelAttribute="profile">
+        Name:<input type="text" name="userName"><br>
+        Password:<input type="password" name="password"><br>
+        <input type="submit" value="login">
+    </form>
+
 </body>
 </html>

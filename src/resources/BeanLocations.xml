@@ -6,7 +6,7 @@
 
     <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="location">
-            <value>controller/database.properties</value>
+            <value>resources/database.properties</value>
         </property>
     </bean>
 
@@ -40,6 +40,6 @@
 
     </bean>
     <context:component-scan
-            base-package="model" />
+            base-package="model, dataAccess" />
 
 </beans>

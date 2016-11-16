@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="model.Profile" table="profile">
+        <meta attribute="class-description">
+            This class contains the employee detail.
+        </meta>
+        <id name="userName" type="string" column="id">
+            <generator class="native"/>
+        </id>
+        <property name="birthday" column="birthday" type="int"/>
+        <property name="bmi" column="bmi" type="float"/>
+        <property name="desiredWeight" column="desired_weight" type="int"/>
+        <property name="gender" column="gender" type="string"/>
+        <property name="height" column="height" type="int"/>
+        <property name="weight" column="weight" type="int"/>
+        <property name="name" column="name" type="string"/>
+        <property name="userName" column="username" type="string"/>
+        <property name="password" column="password" type="string"/>
+        <property name="surName" column="surname" type="string"/>
+        <property name="notes" column="notes" type="string"/>
+    </class>
+</hibernate-mapping>
