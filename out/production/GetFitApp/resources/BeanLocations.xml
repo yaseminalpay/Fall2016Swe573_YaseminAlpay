@@ -34,7 +34,7 @@
         <property name="annotatedClasses">
             <list>
                 <value>model.Profile</value>
-                <value>dataAccess.ProfileBO</value>
+                <value>dataAccess.ProfileDAO</value>
             </list>
         </property>
 

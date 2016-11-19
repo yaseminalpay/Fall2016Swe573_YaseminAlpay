@@ -4,7 +4,9 @@ import model.Profile;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 import util.CustomHibernateDAOSupport;
 
 import java.util.List;
@@ -12,8 +14,17 @@ import java.util.List;
 /**
  * Created by Yasemin Alpay on 13.11.2016.
  */
+@Service("ProfileDAO")
 @Repository("ProfileDAO")
 public class ProfileDAOImpl extends CustomHibernateDAOSupport implements ProfileDAO {
+
+    @Autowired
+    ProfileDAO profileDao;
+
+    public void setProfileDao(ProfileDAO profileDao) {
+        this.profileDao = profileDao;
+    }
+
 
     public void save(Profile profile){
 
@@ -22,9 +33,7 @@ public class ProfileDAOImpl extends CustomHibernateDAOSupport implements Profile
         Transaction txn = session.beginTransaction();
         session.save(profile);
         txn.commit();
-        session.flush();
-        //getHibernateTemplate().save(profile);
-         }
+    }
 
     public void update(Profile profile){
         getHibernateTemplate().update(profile);
