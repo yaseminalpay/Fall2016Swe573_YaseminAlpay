@@ -34,12 +34,12 @@
         <property name="annotatedClasses">
             <list>
                 <value>model.Profile</value>
-                <value>dataAccess.ProfileDAO</value>
+                <value>dao.ProfileDAO</value>
             </list>
         </property>
 
     </bean>
     <context:component-scan
-            base-package="model, dataAccess" />
+            base-package="model, dao" />
 
 </beans>

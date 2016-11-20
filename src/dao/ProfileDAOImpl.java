@@ -1,5 +1,6 @@
-package dataAccess;
+package dao;
 
+import dao.util.CustomHibernateDAOSupport;
 import model.Profile;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -7,7 +8,6 @@ import org.hibernate.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
-import util.CustomHibernateDAOSupport;
 
 import java.util.List;
 

@@ -1,8 +1,6 @@
-package dataAccess;
+package dao;
 
 import model.Profile;
-
-import java.util.List;
 
 /**
  * Created by Yasemin Alpay on 13.11.2016.
