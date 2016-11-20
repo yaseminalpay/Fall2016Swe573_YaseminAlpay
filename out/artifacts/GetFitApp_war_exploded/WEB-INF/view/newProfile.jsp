@@ -11,14 +11,19 @@
     <title>Hello, $(username)!</title>
 </head>
 <body>
-    <h1>username: ${user}</h1>
-    <h1>pass: ${pass}</h1>
-
-
-    <form method="POST" action="/newProfile" modelAttribute="profile">
-        Name:<input type="text" name="userName"><br>
-        Password:<input type="password" name="password"><br>
-        <input type="submit" value="login">
+    <form method="POST" action="/profile" modelAttribute="profile">
+        Username:<input type="email" name="userName">${user}<br>
+        Password:<input type="password" name="password">${pass}<br>
+        Name:<input type="text" name="name"><br>
+        Surname:<input type="text" name="surname"><br>
+        Birthday:<input type="datetime" name="birthday"><br>
+        Gender:<input type="radio" name="gender"><br>
+        Height:<input type="number" name="height"><br>
+        Weight:<input type="number" name="weight"><br>
+        Desired Weight:<input type="number" name="desired_weight"><br>
+        BMI:<input type="number" name="bmi"><br>
+        Notes:<input type="text" name="notes"><br>
+        <input type="submit" value="Save">
     </form>
 
 </body>

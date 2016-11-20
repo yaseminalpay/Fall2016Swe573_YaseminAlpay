@@ -16,21 +16,19 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class ProfileController {
 
     @RequestMapping(value = "/newProfile", method = RequestMethod.POST)
-    public String submitLogin(@ModelAttribute("login") Login login,
+    public String createProfile(@ModelAttribute("login") Profile profile,
+                              ModelMap model) {
+        return "newProfile";
+    }
+
+    @RequestMapping(value = "/profile", method = RequestMethod.POST)
+    public String saveProfile(@ModelAttribute("profile") Profile profile,
                               ModelMap model) {
 
-
-        model.addAttribute("user", login.getUserName());
-        model.addAttribute("pass", login.getPassword());
-
-        String user = login.getUserName();
-        String pass = login.getPassword();
-
         /** insert **/
-        Profile prof = new Profile(user, pass);
-        DAOs.getProfileDao().save(prof);
+        DAOs.getProfileDao().save(profile);
 
-        return "newProfile";
+        return "profileSuccess";
     }
 
 

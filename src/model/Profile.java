@@ -28,11 +28,6 @@ public class Profile implements java.io.Serializable{
 
     public Profile() {}
 
-    public Profile(String _userName, String _password)
-    {
-        this.userName = _userName;
-        this.password = _password;
-    }
 
     public String getUserName() {
         return userName;

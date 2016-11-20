@@ -33,5 +33,6 @@
     <orderEntry type="library" exported="" name="Spring MVC-4.3.3.RELEASE" level="project" />
     <orderEntry type="library" exported="" name="Hibernate 5.2.3-5.2.3" level="project" />
     <orderEntry type="library" name="mysql:mysql-connector-java:5.1.39" level="project" />
+    <orderEntry type="library" name="com.fasterxml.jackson.core:jackson-databind:2.6.7" level="project" />
   </component>
 </module>
