@@ -1,7 +1,6 @@
 package controller;
 
 import dao.util.DAOs;
-import model.Login;
 import model.Profile;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;

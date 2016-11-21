@@ -35,7 +35,7 @@
             <list>
                 <value>model.Profile</value>
                 <value>dao.ProfileDAO</value>
-                <value>model.FoodListItem</value>
+                <value>model.FoodSearchResult</value>
                 <value>model.FoodItem</value>
             </list>
         </property>

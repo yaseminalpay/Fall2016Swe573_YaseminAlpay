@@ -2,8 +2,6 @@ package model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-import java.io.Serializable;
-
 /**
  * Created by Yasemin Alpay on 20.11.2016.
  */
@@ -13,7 +11,7 @@ public class FoodItem {
     int offset;
     String group;
     String name;
-    int ndbno;
+    String ndbno;
     String ds;
 
     public int getOffset() {
@@ -40,11 +38,11 @@ public class FoodItem {
         this.name = name;
     }
 
-    public int getNdbno() {
+    public String getNdbno() {
         return ndbno;
     }
 
-    public void setNdbno(int ndbno) {
+    public void setNdbno(String ndbno) {
         this.ndbno = ndbno;
     }
 
