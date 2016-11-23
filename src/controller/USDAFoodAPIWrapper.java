@@ -8,6 +8,7 @@ import model.FoodSearchResult;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.LinkedHashMap;
@@ -19,7 +20,7 @@ import java.util.List;
 @Controller
 public class USDAFoodAPIWrapper {
 
-    private static final String API_KEY = "MY AWESOME API KEY";
+    private static final String API_KEY = "EyKHrSltRSxgXJZrVt9VQ7hXhZVVDlebIM1btZlK";
     private static final String SEARCH_URL = "http://api.nal.usda.gov/ndb/search/?format=json&api_key=" + API_KEY + "&q=";
     private static final String REPORT_URL = "http://api.nal.usda.gov/ndb/reports/?format=json&type=f&api_key=" + API_KEY + "&ndbno=";
 
@@ -30,8 +31,16 @@ public class USDAFoodAPIWrapper {
         return resultMap;
     }
 
+
     @RequestMapping(value = "/foodSearch" , method = RequestMethod.GET)
-    public List<FoodItem> searchFood(String keyword)
+    public String searchFood()
+    {
+        return "foodSearch";
+    }
+
+
+    @RequestMapping(value = "/foodList" , method = RequestMethod.GET, params = {"keyword"})
+    public List<FoodItem> searchFood(@RequestParam(value = "keyword") String keyword)
     {
         LinkedHashMap resultMap = getResultMap(SEARCH_URL + keyword);
         ObjectMapper mapper = new ObjectMapper();
