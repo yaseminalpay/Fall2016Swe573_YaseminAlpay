@@ -1,15 +1,15 @@
 package controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.sun.org.apache.xpath.internal.operations.Mod;
 import model.FoodDetail;
 import model.FoodItem;
 import model.FoodNutrient;
 import model.FoodSearchResult;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -38,15 +38,36 @@ public class USDAFoodAPIWrapper {
         return "foodSearch";
     }
 
-
+    @ResponseBody
     @RequestMapping(value = "/foodList" , method = RequestMethod.GET, params = {"keyword"})
-    public List<FoodItem> searchFood(@RequestParam(value = "keyword") String keyword)
+    public String searchFood(@RequestParam(value = "keyword") String keyword)
     {
         LinkedHashMap resultMap = getResultMap(SEARCH_URL + keyword);
         ObjectMapper mapper = new ObjectMapper();
         FoodSearchResult searchResult = mapper.convertValue(resultMap.get("list"), FoodSearchResult.class);
         List<FoodItem> foodList = searchResult.getItem();
-        return foodList;
+
+        String json = "";
+        try {
+            json = mapper.writeValueAsString(foodList);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+       /*ModelAndView model = new ModelAndView("foodSearch");
+
+
+        String json = "";
+        try {
+            json = mapper.writeValueAsString(foodList);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        model.addObject("data", json);
+        return model;*/
+       return json;
+
     }
 
     //TODO: fix value and parameter: keyword
